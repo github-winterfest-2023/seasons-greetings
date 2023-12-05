@@ -1,0 +1,19 @@
+name: 'Seasons Greetings'
+on:
+  workflow_dispatch:
+    inputs:
+      person:
+        description: 'Name of the person to send the greeting to'
+        required: true
+      phone:
+        description: 'Phone number to send the greeting to'
+      context:
+        description: 'Context to use for the greeting'
+        required: true
+jobs:
+  send-greeting:
+    name: 'Send greeting'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Happy Holidays'
+        run: echo "Happy Holidays, ${{ github.event.inputs.person }}!"

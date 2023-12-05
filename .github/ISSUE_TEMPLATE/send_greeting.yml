@@ -1,0 +1,32 @@
+name: Send an AI generated seasons's greetings via SMS
+description: You need to send a quick message to your loved ones? Look no further!
+title: "Season's Greeting"
+labels: [greeting]
+body:
+
+- type: input
+  id: recipient
+  attributes:
+    label: "Recipient"
+    description: "Who is this message for?"
+    placeholder: "Mum"
+  validations:
+    required: true
+
+- type: textarea
+  id: context
+  attributes:
+    label: "Context"
+    description: "Anything the AI should know?"
+    placeholder: "I love her christmas cookies"
+  validations:
+    required: true
+
+- type: input
+  id: phone
+  attributes:
+    label: "Phone"
+    description: "Where should the message be send?"
+    placeholder: "+49123456789"
+  validations:
+    required: false
